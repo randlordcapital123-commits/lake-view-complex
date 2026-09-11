@@ -1,0 +1,112 @@
+<!-- Admin Modal Panel -->
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-sliders"></i> Property Management Panel</h2>
+                <span class="close-modal" id="close-admin">&times;</span>
+            </div>
+            <div class="modal-body">
+                
+                <!-- Business Info Settings -->
+                <div class="admin-block">
+                    <h3><i class="fa-solid fa-pen-to-square"></i> General Info Settings</h3>
+                    <form id="business-info-form">
+                        <div class="form-group">
+                            <label>Business Name:</label>
+                            <input type="text" id="admin-biz-name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone:</label>
+                                <input type="text" id="admin-biz-phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label>WhatsApp Number:</label>
+                                <input type="text" id="admin-biz-whatsapp" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Address:</label>
+                            <input type="text" id="admin-biz-address" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Hero Subtitle Text:</label>
+                            <textarea id="admin-hero-sub" rows="2"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Business Info</button>
+                    </form>
+                </div>
+
+                <!-- Media Uploads -->
+                <div class="admin-block">
+                    <h3><i class="fa-solid fa-image"></i> Global Background & Logo</h3>
+                    <div class="grid grid-2">
+                        <div class="drop-zone" id="drop-zone-logo">
+                            <p><i class="fa-solid fa-cloud-arrow-up"></i> Select/Drop <strong>Logo Image</strong></p>
+                            <input type="file" id="file-input-logo" accept="image/*" hidden>
+                        </div>
+                        <div class="drop-zone" id="drop-zone-hero">
+                            <p><i class="fa-solid fa-cloud-arrow-up"></i> Select/Drop <strong>Hero Background</strong></p>
+                            <input type="file" id="file-input-hero" accept="image/*" hidden>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accommodations Manager -->
+                <div class="admin-block">
+                    <h3 id="form-heading"><i class="fa-solid fa-bed"></i> Add / Edit Apartment Listing</h3>
+                    <form id="service-form">
+                        <input type="hidden" id="service-id-hidden">
+                        <input type="hidden" id="service-existing-image">
+
+                        <div class="form-group">
+                            <label>Listing Title:</label>
+                            <input type="text" id="service-title" placeholder="e.g. 2 Bed House Sale / Airbnb" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Price tag:</label>
+                                <input type="text" id="service-price" placeholder="R700,000 / R1,600 night" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Description:</label>
+                            <textarea id="service-desc" rows="3" placeholder="Enter specs like bedrooms, garage, CCTV, layout..." required></textarea>
+                        </div>
+
+                        <!-- Current Image Preview -->
+                        <div id="current-image-preview-container" style="display:none; margin-bottom: 15px; text-align: center;">
+                            <label style="margin-bottom: 5px;">Current Apartment Image:</label>
+                            <img id="current-image-preview" src="" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: 8px;">
+                        </div>
+
+                        <!-- Image Drop zone -->
+                        <div class="drop-zone" id="drop-zone-service">
+                            <p id="drop-zone-service-label"><i class="fa-solid fa-cloud-arrow-up"></i> Select/Drop <strong>New Image</strong></p>
+                            <input type="file" id="file-input-service" accept="image/*" hidden>
+                        </div>
+
+                        <div style="display: flex; gap: 10px; margin-top: 15px;">
+                            <button type="submit" class="btn btn-success" id="save-service-btn">Publish Apartment</button>
+                            <button type="button" class="btn btn-danger" id="cancel-edit-btn" style="display:none;">Cancel Edit</button>
+                        </div>
+                    </form>
+
+                    <h4 style="margin-top:25px;">Active Apartments & Properties</h4>
+                    <div id="admin-services-list" class="admin-items-list"></div>
+                </div>
+
+                <!-- Gallery Manager -->
+                <div class="admin-block">
+                    <h3><i class="fa-solid fa-images"></i> Gallery Uploads</h3>
+                    <div class="drop-zone" id="drop-zone-gallery">
+                        <p><i class="fa-solid fa-cloud-arrow-up"></i> Select/Drop <strong>Gallery Photos</strong></p>
+                        <input type="file" id="file-input-gallery" accept="image/*" hidden>
+                    </div>
+                    <h4 style="margin-top:20px;">Current Gallery Items</h4>
+                    <div id="admin-gallery-list" class="admin-gallery-grid"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
