@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAKE VIEW Complex Property - Accommodation in eMakhazeni</title>
+    <!-- Supabase JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo" id="site-logo-container">
+                <i class="fa-solid fa-building-user logo-icon" id="default-logo-icon"></i>
+                <span id="site-title-text">LAKE VIEW</span>
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#featured" class="nav-link">Property Details</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#admin" class="nav-link admin-btn" id="admin-nav-btn"><i class="fa-solid fa-lock"></i> Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Welcome to Premium Living</span>
+            <h1 id="hero-title-display">LAKE VIEW Complex Property</h1>
+            <p id="hero-subtitle-display">Modern, secure, and comfortable accommodation located at 97 Joubert St, eMakhazeni. Experience luxury living with peaceful lake views.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/27662744119?text=Hello%2C%20I%20am%20interested%20in%20Lake%20View%20Complex." target="_blank" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+                </a>
+                <a href="tel:+27662744119" class="btn btn-call">
+                    <i class="fa-solid fa-phone"></i> Call Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOLD FEATURED ANNOUNCEMENT BANNER -->
+    <section id="featured" class="featured-banner-section">
+        <div class="container">
+            <div class="featured-box">
+                <div class="featured-tag">FEATURED PROPERTY HIGHLIGHT</div>
+                <h2 class="featured-title">2 BEDROOM & 2 BATHROOM HOUSE FOR SALE / AIRBNB</h2>
+                <div class="featured-details">
+                    <p class="highlight-text">
+                        <strong><i class="fa-solid fa-house"></i> 2 Bedroom and 2 Bathroom House</strong> | 
+                        <strong><i class="fa-solid fa-border-all"></i> Open Plan Living</strong> | 
+                        <strong><i class="fa-solid fa-warehouse"></i> Locked Garage</strong> | 
+                        <strong><i class="fa-solid fa-video"></i> 24/7 CCTV in Complex</strong>
+                    </p>
+                </div>
+                <div class="featured-prices">
+                    <div class="price-chip sale-chip">
+                        <span class="chip-label">PURCHASE PRICE:</span>
+                        <strong class="chip-value">R700,000</strong>
+                    </div>
+                    <div class="price-chip airbnb-chip">
+                        <span class="chip-label">AIRBNB DAILY RENTAL:</span>
+                        <strong class="chip-value">R1,600 / Night <small>(Whole Unit)</small></strong>
+                    </div>
+                </div>
+                <div class="featured-actions">
+                    <a href="https://wa.me/27662744119?text=Hi%2C%20I%20am%20enquiring%20about%20the%202%20Bedroom%20House%20(R700%2C000%20purchase%20%2F%20R1%2C600%20Airbnb)." target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Book or Enquire via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="grid grid-2">
+                <div class="about-text">
+                    <h2 class="section-title">About Lake View Complex</h2>
+                    <p>Located at <strong>97 Joubert St, eMakhazeni, 1100</strong>, Lake View Complex offers modern, fully equipped, and peaceful living spaces for short-term Airbnb stays and permanent property purchases.</p>
+                    <p>Designed with modern finishes, open-plan layouts, and high-end security including CCTV monitoring, our property guarantees comfort, privacy, and peace of mind.</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-video"></i> 24/7 CCTV Security & Controlled Access</li>
+                        <li><i class="fa-solid fa-warehouse"></i> Secure Locked Garages</li>
+                        <li><i class="fa-solid fa-wifi"></i> Fast Connectivity</li>
+                        <li><i class="fa-solid fa-water-ladder"></i> Scenic Lake Surroundings</li>
+                    </ul>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Lake View Exterior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodations Section -->
+    <section id="services" class="section services-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Accommodations & Options</h2>
+                <p>Choose from our available properties for sale or short-term Airbnb stays.</p>
+            </div>
+            <div class="grid grid-3" id="services-grid">
+                <!-- Injected via Supabase -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Property Gallery</h2>
+                <p>Explore high-quality pictures of our rooms, complex, and surroundings.</p>
+            </div>
+            <div class="grid grid-3" id="gallery-grid">
+                <!-- Injected via Supabase -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p>Have questions or want to schedule a viewing? Reach out anytime!</p>
+            </div>
+            <div class="grid grid-2">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p id="contact-address-display">97 Joubert St, eMakhazeni, 1100</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p id="contact-phone-display">+27662744119</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p id="contact-whatsapp-display">+27662744119</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://maps.google.com/maps?q=97%20Joubert%20St,%20eMakhazeni,%201100&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Modal Panel -->
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-sliders"></i> Property Management Panel</h2>
+                <span class="close-modal" id="close-admin">&times;</span>
+            </div>
+            <div class="modal-body">
+                
+                <!-- Business Info Settings -->
+                <div class="admin-block">
+                    <h3><i class="fa-solid fa-pen-to-square"></i> General Info Settings</h3>
+                    <form id="business-info-form">
+                        <div class="form-group">
+                            <label>Business Name:</label>
+                            <input type="text" id="admin-biz-name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone:</label>
+                                <input type="text" id="admin-biz-phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label>WhatsApp Number:</label>
+                                <input type="text" id="admin-biz-whatsapp" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Address:</label>
+                            <input type="text" id="admin-biz-address" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Hero Subtitle Text:</label>
+                            <textarea id="admin-hero-sub" rows="2"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Business Info</button>
+                    </form>
+                </div>
+
+                <!-- Media Uploads -->
+                <div class="admin-block">
+                    <h3><i class="fa-solid fa-image"></i> Drag & Drop Media Uploads</h3>
+                    <div class="grid grid-2">
+                        <div class="drop-zone" id="drop-zone-logo">
+                            <p><i class="fa-solid fa-cloud-arrow-up"></i> Select/Drop <strong>Logo Image</strong></p>
+                            <input type="file" id="file-input-logo" accept="image/*" hidden>
+                        </div>
+                        <div class="drop-zone" id="drop-zone-hero">
+                            <p><i class="fa-solid fa-cloud-arrow-up"></i> Select/Drop <strong>Hero Background</strong></p>
+                            <input type="file" id="file-input-hero" accept="image/*" hidden>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accommodations Manager -->
+                <div class="admin-block">
+                    <h3><i class="fa-solid fa-bed"></i> Add / Edit Listings</h3>
+                    <form id="service-form">
+                        <div class="form-group">
+                            <label>Listing Title:</label>
+                            <input type="text" id="service-title" placeholder="e.g. 2 Bed House Sale / Airbnb" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Price tag:</label>
+                                <input type="text" id="service-price" placeholder="R700,000 / R1,600 night" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Description:</label>
+                            <textarea id="service-desc" rows="3" placeholder="Enter specs like bedrooms, garage, CCTV, layout..." required></textarea>
+                        </div>
+                        <div class="drop-zone" id="drop-zone-service">
+                            <p><i class="fa-solid fa-cloud-arrow-up"></i> Select/Drop <strong>Listing Image</strong></p>
+                            <input type="file" id="file-input-service" accept="image/*" hidden>
+                        </div>
+                        <button type="submit" class="btn btn-success" style="margin-top:15px;" id="save-service-btn">Publish Listing</button>
+                    </form>
+
+                    <h4 style="margin-top:25px;">Active Listings</h4>
+                    <div id="admin-services-list" class="admin-items-list"></div>
+                </div>
+
+                <!-- Gallery Manager -->
+                <div class="admin-block">
+                    <h3><i class="fa-solid fa-images"></i> Gallery Uploads</h3>
+                    <div class="drop-zone" id="drop-zone-gallery">
+                        <p><i class="fa-solid fa-cloud-arrow-up"></i> Select/Drop <strong>Gallery Photos</strong></p>
+                        <input type="file" id="file-input-gallery" accept="image/*" hidden>
+                    </div>
+                    <h4 style="margin-top:20px;">Current Gallery Items</h4>
+                    <div id="admin-gallery-list" class="admin-gallery-grid"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> <span id="footer-biz-name">LAKE VIEW Complex Property</span>. All Rights Reserved.</p>
+            <p>97 Joubert St, eMakhazeni, 1100 | Contact: +27662744119</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
